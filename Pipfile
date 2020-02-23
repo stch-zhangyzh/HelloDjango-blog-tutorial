@@ -1,13 +1,15 @@
 [[source]]
 name = "pypi"
-url = "https://pypi.org/simple"
+url = "https://pypi.douban.com/simple"
 verify_ssl = true
 
 [dev-packages]
+fabric = "*"
 
 [packages]
 django = "==2.2.3"
 markdown = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
