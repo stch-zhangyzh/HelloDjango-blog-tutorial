@@ -44,6 +44,8 @@ class Post(models.Model):
  
     author = models.ForeignKey(User, verbose_name='作者', on_delete=models.CASCADE)
 
+    views = models.PositiveIntegerField(default=0)
+
     class Meta:
         verbose_name = '文章'
         verbose_name_plural = verbose_name
@@ -63,6 +65,10 @@ class Post(models.Model):
         
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk': self.pk})
+
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
 
     def __str__(self):
         return self.title
