@@ -1,6 +1,6 @@
 [[source]]
 name = "pypi"
-url = "https://pypi.douban.com/simple"
+url = "https://mirrors.aliyun.com/pypi/simple"
 verify_ssl = true
 
 [dev-packages]
@@ -10,6 +10,8 @@ fabric = "*"
 django = "==2.2.3"
 markdown = "*"
 gunicorn = "*"
+faker = "*"
+django-pure-pagination = "*"
 
 [requires]
 python_version = "3.6"
